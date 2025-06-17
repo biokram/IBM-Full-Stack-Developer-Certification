@@ -1,0 +1,56 @@
+<!--File modified and created by Mark Elmore as part of the final project for the HTML, CSS, and JavaScript course (MAE)-->
+<!--Added DOCTYPE per project instruction (ME)-->
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--Added title tag per project instruction (ME)-->
+    <title>Simple Interest Calculator</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <!--Added div tag and moved body content to div tag per project instruction (ME)-->
+        <!--Added maindiv class to div tag per project instruction (ME)-->
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+
+            Amount <input type="number"  id="principal">  <br/>
+            
+            <!--Modified input type per project instructions (MAE)-->
+            <!--Linked to function updateRate() per project instructions (MAE)-->
+            Rate <input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()">  <br/>
+            <!--Added span tag to display rate value per project instructions (MAE)-->
+            <span id="rate_val">10.25</span>% <br/>
+            
+            <!--Modified input to autocomplete options per project instructions (MAE)-->
+            No. of Years <input type="number"  id="years" list="all_years">  <br/>
+            <!--Added datalist for autocomplete per project instructions (MAE)-->
+            <datalist id="all_years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </datalist>
+            
+            Interest : <span id="result"></span><br>
+            <!--Modified name of button per project instructions (MAE)-->
+            <button onclick="compute()">Compute Interest</button>
+            <!--Added span to display result per project instruction (MAE)-->
+            <span id="result">
+
+            </span>
+        </div>
+        <!--Added footer tag per project instruction (ME)-->
+        <footer>
+            &#169; 2025 Simple Interest Calculator by Mark Elmore
+        </footer>
+    </body>
+</html>
